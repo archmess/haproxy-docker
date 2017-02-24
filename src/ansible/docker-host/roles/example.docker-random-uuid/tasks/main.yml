@@ -1,0 +1,19 @@
+---
+# tasks file for example.docker-random-uuid
+
+- pip:
+    name: docker-py
+
+- name: Pull image
+  docker_image:
+    name: joscelynjean/random-uuid
+
+- name: Start a container
+  docker_container:
+    name: application-random-uuid
+    image: joscelynjean/random-uuid
+    state: started
+    restart: yes
+    restart_policy: always
+    ports:
+     - "80:8080"
