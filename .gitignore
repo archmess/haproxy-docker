@@ -1,2 +1,5 @@
 *.log
 *.retry
+
+src/ansible/docker-host/roles
+!src/ansible/docker-host/roles/example.*

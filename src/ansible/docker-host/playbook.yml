@@ -4,4 +4,4 @@
 
   roles:
     - mongrelion.docker
-    - applicationserver
+    - example.docker-random-uuid
