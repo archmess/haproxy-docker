@@ -15,6 +15,10 @@ sudo echo 'listen randomuuid' >> /etc/haproxy/haproxy.cfg
 sudo echo ' bind 0.0.0.0:80' >> /etc/haproxy/haproxy.cfg
 # Processes HTTP protocol for each request and response
 sudo echo ' mode http' >> /etc/haproxy/haproxy.cfg
+# Enable stats
+sudo echo ' stats enable' >> /etc/haproxy/haproxy.cfg
+# Configure URI
+sudo echo ' stats uri /haproxy?stats' >> /etc/haproxy/haproxy.cfg
 # Round robin as algorithm for balancing
 sudo echo ' balance roundrobin' >> /etc/haproxy/haproxy.cfg
 # Close connection, validate that the header is present

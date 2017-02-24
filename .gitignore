@@ -1,5 +1,6 @@
 *.log
 *.retry
+.vagrant
 
 src/ansible/docker-host/roles
 !src/ansible/docker-host/roles/example.*
